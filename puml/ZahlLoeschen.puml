@@ -1,0 +1,12 @@
+@startuml ZahlLoeschen
+
+participant "Client" as Client
+participant ":ZahlLoeschen" as ZahlLoeschen
+participant ":MainViewModel" as MainViewModel
+
+Client -> ZahlLoeschen: keyCPressed()
+ZahlLoeschen -> MainViewModel: set displayValue()
+ZahlLoeschen -> MainViewModel: updateDisplay()
+
+
+

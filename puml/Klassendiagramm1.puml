@@ -1,0 +1,20 @@
+@startuml Klassendiagramm1
+class MainViewModel {
+    displayValue: number
+    updateDisplay()
+}
+class MainView {
+    display: HTMLElement
+    key1: HTMLElement
+    keyC: HTMLElement
+}
+class ZahlEingeben {
+    key1Pressed()
+}
+class EingabeLoeschen {
+    keyCPressed()
+}
+
+MainViewModel o-- ZahlEingeben
+MainViewModel o-- EingabeLoeschen
+MainViewModel o-- MainView

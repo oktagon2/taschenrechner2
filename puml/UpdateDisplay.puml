@@ -1,0 +1,11 @@
+@startuml UpdateDisplay
+
+participant "Client" as Client
+participant ":MainViewModel" as MainViewModel
+participant ":MainView" as MainView
+participant "display:HTMLElement" as display
+
+Client -> MainViewModel : set displayValue()
+Client -> MainViewModel : updateDisplay()
+MainViewModel -> MainView : get display()
+MainViewModel -> display : set innerText()

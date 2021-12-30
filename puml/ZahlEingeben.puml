@@ -1,0 +1,13 @@
+@startuml ZahlEingeben
+
+participant "Client" as Client
+participant ":ZahlEingeben" as ZahlEingeben
+participant ":MainViewModel" as MainViewModel
+
+Client -> ZahlEingeben: key1Pressed()
+ZahlEingeben -> MainViewModel: get displayValue()
+ZahlEingeben -> MainViewModel: set displayValue()
+ZahlEingeben -> MainViewModel: updateDisplay()
+
+
+
